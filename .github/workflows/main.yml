@@ -21,6 +21,7 @@ jobs:
         cache: 'npm'
     - run: npm i
     - run: npm run build
+    
   deploy:
     needs: test-build
     runs-on: ubuntu-latest
@@ -44,7 +45,7 @@ jobs:
             {
               echo "Repository belum di-clone. Cloning...";
               mkdir -p ~/senpro/480096/modul02;
-              cd ~/senpro/480096/module2;
+              cd ~/senpro/480096/modul02;
               git clone git@github.com:DiftaFitrahul/senpro-github-action.git;
             } ||
             {
